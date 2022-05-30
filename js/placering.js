@@ -1,10 +1,9 @@
-restApi = "http://localhost:8181/cykelrytter"
-restApiHold = "http://localhost:8181/cykelhold"
+restApi = "http://localhost:8181/cykelrytter/order"
 
 
-let cykelTabel = document.getElementById("cykel-tabel")
+let cykelTabel = document.getElementById("placering-tabel")
 
-  function fetchData(url) {
+function fetchData(url) {
   return fetch(url).then(res => res.json());
 }
 
@@ -14,7 +13,6 @@ cykelTabel.innerHTML ="";
 
 async function createTabel() {
   const rytterData = await fetchData(restApi);
-  const holdData = await fetchData(restApiHold);
 
   //console.log(JSON.stringify(rytterData));
   cykelTabel.innerHTML += `<tr>
