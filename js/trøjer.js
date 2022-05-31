@@ -47,7 +47,7 @@ async function opretRytterTabel() {
       <td>${rytterData[0].cykelhold.teamnavn}</td>
       <td>${rytterData[0].navn}</td>
       <td>${rytterData[0].nationalitet}</td>
-      <td>${tid}</td>
+      <td></td>
       <td>${rytterData[0].bjergpoint}</td>
       <td>${rytterData[0].spurtpoint}</td>
     </tr>
@@ -59,7 +59,7 @@ async function opretRytterTabel() {
       <td>${rytterData[22].cykelhold.teamnavn}</td>
       <td>${rytterData[22].navn}</td>
       <td>${rytterData[22].nationalitet}</td>
-      <td>${tid}</td>
+      <td></td>
       <td>${rytterData[22].bjergpoint}</td>
       <td>${rytterData[22].spurtpoint}</td>
     </tr>
@@ -71,7 +71,7 @@ async function opretRytterTabel() {
       <td>${rytterData[24].cykelhold.teamnavn}</td>
       <td>${rytterData[24].navn}</td>
       <td>${rytterData[24].nationalitet}</td>
-      <td>${tid}</td>
+      <td></td>
       <td>${rytterData[24].bjergpoint}</td>
       <td>${rytterData[24].spurtpoint}</td>
     </tr>
