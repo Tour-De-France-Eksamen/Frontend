@@ -16,6 +16,7 @@ async function opretRytterTabel() {
     <th scope="col">#</th>
     <th scope="col">Hold</th>
     <th scope="col">Cykelrytter</th>
+    <th scope="col">Nationalitet</th>
     <th scope="col">Samlet tid</th>
     <th scope="col">Bjergpoint</th>
     <th scope="col">Spurtpoint</th>
@@ -33,6 +34,7 @@ async function opretRytterTabel() {
       <td>${rytterData[i].cykelrytterId}</td>
       <td>${rytterData[i].cykelhold.teamnavn}</td>
       <td>${rytterData[i].navn}</td>
+      <td>${rytterData[i].nationalitet}</td>
       <td>${tid}</td>
       <td>${rytterData[i].bjergpoint}</td>
       <td>${rytterData[i].spurtpoint}</td>
@@ -41,6 +43,7 @@ async function opretRytterTabel() {
     `;
   }
 }
+
 opretRytterTabel();
 
 

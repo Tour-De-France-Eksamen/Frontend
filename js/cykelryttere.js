@@ -16,6 +16,8 @@ function fetchData(url) {
     <th scope="col">#</th>
     <th scope="col">Hold</th>
     <th scope="col">Cykelrytter</th>
+    <th scope="col">Alder</th>
+    <th scope="col">Nationalitet</th>
     <th scope="col">Samlet tid</th>
     <th scope="col">Bjergpoint</th>
     <th scope="col">Spurtpoint</th>
@@ -33,6 +35,8 @@ function fetchData(url) {
       <td>${rytterData[i].cykelrytterId}</td>
       <td>${rytterData[i].cykelhold.teamnavn}</td>
       <td>${rytterData[i].navn}</td>
+      <td>${rytterData[i].alder}</td>
+      <td>${rytterData[i].nationalitet}</td>
       <td>${tid}</td>
       <td>${rytterData[i].bjergpoint}</td>
       <td>${rytterData[i].spurtpoint}</td>
