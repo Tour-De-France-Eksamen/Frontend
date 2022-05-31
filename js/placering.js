@@ -1,4 +1,4 @@
-restApi = "http://localhost:8181/cykelrytter/order"
+restApi = "http://localhost:8181/cykelrytter/orden"
 
 
 let cykelTabel = document.getElementById("placering-tabel")

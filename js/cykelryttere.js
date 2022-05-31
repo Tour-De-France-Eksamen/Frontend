@@ -9,7 +9,6 @@ let cykelTabel = document.getElementById("cykel-tabel")
 }
 
 createTabel();
-cykelTabel.innerHTML ="";
 
 
 async function createTabel() {

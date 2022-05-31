@@ -30,16 +30,6 @@ async function createTabel() {
     <tr>
       <th scope="row">1</th>
       <td>${data[i].teamnavn}</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>data.alder</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
     </tbody>
     `;
 
