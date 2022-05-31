@@ -1,21 +1,17 @@
-restApi = "http://localhost:8181/cykelrytter"
-restApiHold = "http://localhost:8181/cykelhold"
+restApi = "http://localhost:8181/cykelrytter";
 
 
-let cykelTabel = document.getElementById("cykel-tabel")
+let cykelTabel = document.getElementById("cykel-tabel");
 
-  function fetchData(url) {
+function fetchData(url) {
   return fetch(url).then(res => res.json());
 }
 
-createTabel();
 
-
-async function createTabel() {
+  async function opretRytterTabel() {
   const rytterData = await fetchData(restApi);
-  const holdData = await fetchData(restApiHold);
 
-  //console.log(JSON.stringify(rytterData));
+
   cykelTabel.innerHTML += `<tr>
     <th scope="col">#</th>
     <th scope="col">Hold</th>
@@ -24,11 +20,12 @@ async function createTabel() {
     <th scope="col">Bjergpoint</th>
     <th scope="col">Spurtpoint</th>
   </tr>`
+
   const loop = await fetchData(restApi);
   for (let i = 0; i < loop.length; i++) {
-    console.log(rytterData[i].navn);
-
-
+    let splitTid = rytterData[i].samlettid;
+    splitTid = splitTid.toString();
+    let tid = splitTid.slice(0, 2) + " timer " + splitTid.slice(2, 4) + " minuter " + splitTid.slice(0, 2) + " sekunder ";
     cykelTabel.innerHTML += `
 
     <tbody>
@@ -36,7 +33,7 @@ async function createTabel() {
       <td>${rytterData[i].cykelrytterId}</td>
       <td>${rytterData[i].cykelhold.teamnavn}</td>
       <td>${rytterData[i].navn}</td>
-      <td>${rytterData[i].samlettid}</td>
+      <td>${tid}</td>
       <td>${rytterData[i].bjergpoint}</td>
       <td>${rytterData[i].spurtpoint}</td>
     </tr>
@@ -44,6 +41,7 @@ async function createTabel() {
     `;
   }
 }
+opretRytterTabel();
 
 
 

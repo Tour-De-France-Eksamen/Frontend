@@ -1,21 +1,18 @@
-restApi = "http://localhost:8181/cykelhold"
+restApi = "http://localhost:8181/cykelhold";
 
 
-let cykelholdTabel = document.getElementById("cykelhold-tabel")
+let cykelholdTabel = document.getElementById("cykelhold-tabel");
 
- function fetchData(url) {
+function fetchData(url) {
   return fetch(url).then(res => res.json());
 }
 
-createTabel();
-cykelholdTabel.innerHTML ="";
+opretTabel();
 
-async function createTabel() {
-  const data = await fetchData(restApi)
-  // console.log(JSON.stringify(data));
+async function opretTabel() {
+  const data = await fetchData(restApi);
   const loop = await fetchData(restApi);
   for (let i = 0; i < loop.length; i++) {
-    console.log(data[i].teamnavn);
 
     cykelholdTabel.innerHTML += `
     <thead>
@@ -32,7 +29,6 @@ async function createTabel() {
       <td>${data[i].teamnavn}</td>
     </tbody>
     `;
-
   }
 }
 
